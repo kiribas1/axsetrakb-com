@@ -3,101 +3,171 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Axsetra KB | 安全金融软件与隐私基础设施"
-  description="安全金融软件和注重隐私的基础设施。软件开发和技术咨询。在基里巴斯共和国注册。"
+  title="Axsetra KB | 安全、银行软件与数字资产"
+  description="Axsetra KB 构建安全的网上银行平台 (AXSE)、VPS加固、无日志私人VPN解决方案，以及包括代币发行和加密交易所开发在内的区块链产品。"
   lang="zh"
 >
-  <Fragment slot="logo">Axsetra KB</Fragment>
-  <Fragment slot="footer-name">Axsetra KB</Fragment>
+  <Fragment slot="subtitle">个人 · 安全 · 金融 · 数字资产</Fragment>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="/images/logo.webp" alt="Logo" class="hero-logo" width="200" height="auto" />
-    <h1>Axsetra KB</h1>
-    <p class="tagline">个人 · 安全 · 金融 · 数字资产</p>
-    <p>安全金融软件和注重隐私的基础设施</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row align-items-center" style="min-height:100%;">
+          <div class="col-12 col-lg-7 col-xl-6">
+            <h1 class="hero-title axsetrakbfont titlecolor mb-2">Axsetra KB</h1>
+            <h2 class="h4 subtitlecolor mb-3" style="letter-spacing:.02em;">个人 · 安全 · 金融 · 数字资产</h2>
+            <p class="hero-lead subtitlecolor mb-4">
+              Axsetra KB 构建安全的金融软件和注重隐私的基础设施：网上银行平台 (AXSE)、
+              VPS加固、专属无日志VPN，以及代币和交易所的区块链解决方案。
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#services" class="btn btn-light px-4">浏览服务</a>
+              <a href="#contact" class="btn btn-outline-light px-4">联系我们</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">广告位 - Google AdSense</div>
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>安全网络平台</h2>
-      <p>集成Python的多语言网站，满足复杂的商业需求。</p>
-    </article>
-    <article class="card">
-      <h2>网上银行软件 (AXSE)</h2>
-      <p>覆盖账户、支付和合规的生产就绪银行解决方案。</p>
-    </article>
-    <article class="card">
-      <h2>VPS加固与基础设施</h2>
-      <p>隔离、加密和访问控制系统。</p>
-    </article>
-    <article class="card">
-      <h2>专属私人VPN</h2>
-      <p>无日志服务，支持自定义出口国家；不与其他客户共享。</p>
-    </article>
-    <article class="card">
-      <h2>代币与交易所开发</h2>
-      <p>在ETH、BNB Chain、Solana上创建代币。DEX/CEX系统，集成钱包和交易功能。</p>
-    </article>
-    <article class="card">
-      <h2>隐私域名配置</h2>
-      <p>具有司法管辖意识的网络身份配置。</p>
-    </article>
-  </div>
+  <!-- SERVICES -->
+  <section id="services" class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-9">
+        <h2 class="axsetrakbfont mb-2">服务</h2>
+        <p class="text-muted mb-0">为银行、金融科技公司和私人客户提供安全设计的开发：网络平台、网上银行 (AXSE)、基础设施安全、私人VPN和区块链产品。</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F310;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">安全网络平台与集成</h3>
+            <p class="card-text text-muted">高端网站和多语言平台，集成Python满足复杂的商业需求。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F3E6;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">网上银行软件 (AXSE)</h3>
+            <p class="card-text text-muted">面向银行和金融科技公司的生产就绪网上银行软件：账户、支付、安全、合规。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F510;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">VPS加固与基础设施安全</h3>
+            <p class="card-text text-muted">加固的环境：隔离、加密、访问控制和安全运营。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">专属私人VPN（无日志）</h3>
+            <p class="card-text text-muted">专属高速VPN，支持自定义出口国家。不与其他客户共享。反监控设计。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1FA99;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">代币开发与发行</h3>
+            <p class="card-text text-muted">在ETH、BNB Chain和Solana上创建和部署代币，提供发行支持和链上配置。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F501;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">加密交易所开发 (DEX/CEX)</h3>
+            <p class="card-text text-muted">与AXSE集成或独立的交易所系统：交易、钱包、集成和安全后端逻辑。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F30D;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">隐私域名与网络身份配置</h3>
+            <p class="card-text text-muted">增强隐私的域名和网络身份配置，减少暴露，具有司法管辖意识。</p>
+            <a href="#contact" class="btn btn-primary btn-sm">详情</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="ad-slot">广告位 - Google AdSense</div>
 
-  <section class="registration-info">
-    <h2>注册与法律信息</h2>
-    <p><strong>许可证：</strong> KBN-40-000001（商业许可）</p>
-    <p><strong>监管机构：</strong> Kiribati International Financial Authority (KIFA)</p>
-    <p><strong>联系方式：</strong> axsetrakb@proton.me</p>
-  </section>
-
-  <section class="disclaimer">
-    <p>Axsetra KB 仅提供软件开发和技术咨询。不提供金融服务、经纪、托管或公开交易所运营。</p>
+  <!-- CONTACT -->
+  <section id="contact" class="container pb-5">
+    <div class="card p-4 contact-card">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <h2 class="axsetrakbfont mb-2">联系我们</h2>
+          <p class="text-muted mb-3">描述您的需求（概括即可）。我们将回复安全架构方案和后续步骤。</p>
+          <div class="small text-muted">
+            邮箱: axsetrakb@proton.me
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_name">姓名</label>
+                <input id="id_name" name="name" class="form-control" required maxlength="120" placeholder="您的姓名" autocomplete="name" />
+                <div class="invalid-feedback">请输入您的姓名。</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_email">邮箱</label>
+                <input id="id_email" name="email" type="email" class="form-control" required maxlength="180" placeholder="you@company.com" autocomplete="email" />
+                <div class="invalid-feedback">请输入有效的邮箱。</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="id_message">留言</label>
+                <textarea id="id_message" name="message" class="form-control" rows="5" required maxlength="4000"
+                  placeholder="告诉我们您想构建/保护什么，时间框架和关键限制。"
+                  autocomplete="off"></textarea>
+                <div class="invalid-feedback">请写一条简短的留言。</div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <button type="submit" class="btn btn-primary px-4">发送消息</button>
+                  <small class="text-muted">我们将在快速审核后回复。</small>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">
+                    重要：我们从 <strong>axsetrakb@proton.me</strong> 回复。
+                    请将其添加到您的安全发件人列表，以免错过我们的回复。
+                  </small>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">广告位 - Google AdSense</div>
 </BaseLayout>
-
-<style>
-  .hero-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  .tagline {
-    font-size: 1.4rem;
-    font-weight: 600;
-    opacity: 1;
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-  }
-  .registration-info {
-    background: white;
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    text-align: center;
-  }
-  .registration-info h2 {
-    margin-bottom: 16px;
-    color: #1a1a2e;
-  }
-  .registration-info p {
-    margin: 6px 0;
-    color: #555;
-  }
-  .disclaimer {
-    text-align: center;
-    padding: 16px 24px;
-    margin-top: 24px;
-    font-size: 0.85rem;
-    color: #777;
-    line-height: 1.5;
-  }
-</style>

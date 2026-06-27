@@ -3,101 +3,171 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Axsetra KB | Безопасное финансовое ПО и инфраструктура конфиденциальности"
-  description="Безопасное финансовое программное обеспечение и инфраструктура, ориентированная на конфиденциальность. Разработка ПО и техническое консультирование. Лицензия в Республике Кирибати."
+  title="Axsetra KB | Безопасность, Банковское ПО и Цифровые Активы"
+  description="Axsetra KB разрабатывает безопасные платформы интернет-банкинга (AXSE), укрепление VPS, приватные VPN без логов и блокчейн-продукты, включая запуск токенов и разработку криптобирж."
   lang="ru"
 >
-  <Fragment slot="logo">Axsetra KB</Fragment>
-  <Fragment slot="footer-name">Axsetra KB</Fragment>
+  <Fragment slot="subtitle">Персональное · Безопасность · Финансы · Цифровые активы</Fragment>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="/images/logo.webp" alt="Logo" class="hero-logo" width="200" height="auto" />
-    <h1>Axsetra KB</h1>
-    <p class="tagline">Персональное · Безопасность · Финансы · Цифровые активы</p>
-    <p>Безопасное финансовое программное обеспечение и инфраструктура конфиденциальности</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row align-items-center" style="min-height:100%;">
+          <div class="col-12 col-lg-7 col-xl-6">
+            <h1 class="hero-title axsetrakbfont titlecolor mb-2">Axsetra KB</h1>
+            <h2 class="h4 subtitlecolor mb-3" style="letter-spacing:.02em;">Персональное · Безопасность · Финансы · Цифровые активы</h2>
+            <p class="hero-lead subtitlecolor mb-4">
+              Axsetra KB создает безопасное финансовое ПО и инфраструктуру конфиденциальности: платформы интернет-банкинга (AXSE),
+              укрепление VPS, выделенный VPN без логов и блокчейн-решения для токенов и бирж.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#services" class="btn btn-light px-4">Услуги</a>
+              <a href="#contact" class="btn btn-outline-light px-4">Контакт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">Рекламное место - Google AdSense</div>
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>Безопасные веб-платформы</h2>
-      <p>Многоязычные сайты с интеграцией Python для сложных бизнес-задач.</p>
-    </article>
-    <article class="card">
-      <h2>ПО для интернет-банкинга (AXSE)</h2>
-      <p>Готовое к эксплуатации банковское решение, охватывающее счета, платежи и соответствие нормативам.</p>
-    </article>
-    <article class="card">
-      <h2>Укрепление VPS и инфраструктура</h2>
-      <p>Системы изоляции, шифрования и контроля доступа.</p>
-    </article>
-    <article class="card">
-      <h2>Выделенный частный VPN</h2>
-      <p>Сервис без логов с выбором страны выхода; не используется совместно с другими клиентами.</p>
-    </article>
-    <article class="card">
-      <h2>Разработка токенов и бирж</h2>
-      <p>Создание токенов на ETH, BNB Chain, Solana. Системы DEX/CEX с интегрированными кошельками и торговым функционалом.</p>
-    </article>
-    <article class="card">
-      <h2>Настройка приватного домена</h2>
-      <p>Конфигурация веб-идентичности с учётом юрисдикции.</p>
-    </article>
-  </div>
+  <!-- SERVICES -->
+  <section id="services" class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-9">
+        <h2 class="axsetrakbfont mb-2">Услуги</h2>
+        <p class="text-muted mb-0">Безопасная разработка для банков, финтех-компаний и частных клиентов: веб-платформы, интернет-банкинг (AXSE), безопасность инфраструктуры, приватный VPN и блокчейн-продукты.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F310;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Безопасные веб-платформы и интеграции</h3>
+            <p class="card-text text-muted">Высококлассные сайты и многоязычные платформы с интеграцией Python для сложных бизнес-задач.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F3E6;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">ПО для интернет-банкинга (AXSE)</h3>
+            <p class="card-text text-muted">Готовое к эксплуатации банковское ПО для банков и финтехов: счета, платежи, безопасность, соответствие.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F510;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Укрепление VPS и безопасность инфраструктуры</h3>
+            <p class="card-text text-muted">Защищенные среды: изоляция, шифрование, контроль доступа и безопасные операции.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Выделенный приватный VPN (без логов)</h3>
+            <p class="card-text text-muted">Выделенный высокоскоростной VPN с выбором страны выхода. Не используется другими клиентами. Защита от слежки.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1FA99;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Разработка и запуск токенов</h3>
+            <p class="card-text text-muted">Создание и развертывание токенов на ETH, BNB Chain и Solana с поддержкой запуска и настройкой on-chain.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F501;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Разработка криптобирж (DEX/CEX)</h3>
+            <p class="card-text text-muted">Биржевые системы, интегрированные с AXSE или автономные: трейдинг, кошельки, интеграции и безопасная логика бэкенда.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F30D;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Приватный домен и настройка веб-идентичности</h3>
+            <p class="card-text text-muted">Настройка домена и веб-идентичности с повышенной конфиденциальностью, сниженной экспозицией и учетом юрисдикции.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="ad-slot">Рекламное место - Google AdSense</div>
 
-  <section class="registration-info">
-    <h2>Регистрация и правовая информация</h2>
-    <p><strong>Лицензия:</strong> KBN-40-000001 (Коммерческая)</p>
-    <p><strong>Регулятор:</strong> Kiribati International Financial Authority (KIFA)</p>
-    <p><strong>Контакт:</strong> axsetrakb@proton.me</p>
-  </section>
-
-  <section class="disclaimer">
-    <p>Axsetra KB предоставляет только разработку программного обеспечения и техническое консультирование. Финансовые услуги, брокерская деятельность, хранение активов или операции публичных бирж не предлагаются.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="container pb-5">
+    <div class="card p-4 contact-card">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <h2 class="axsetrakbfont mb-2">Контакт</h2>
+          <p class="text-muted mb-3">Опишите, что вам нужно (общее описание достаточно). Мы ответим с предложением безопасной архитектуры и следующими шагами.</p>
+          <div class="small text-muted">
+            Email: axsetrakb@proton.me
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_name">Имя</label>
+                <input id="id_name" name="name" class="form-control" required maxlength="120" placeholder="Ваше имя" autocomplete="name" />
+                <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_email">Email</label>
+                <input id="id_email" name="email" type="email" class="form-control" required maxlength="180" placeholder="you@company.com" autocomplete="email" />
+                <div class="invalid-feedback">Пожалуйста, введите корректный email.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="id_message">Сообщение</label>
+                <textarea id="id_message" name="message" class="form-control" rows="5" required maxlength="4000"
+                  placeholder="Расскажите, что вы хотите построить / защитить, сроки и ключевые ограничения."
+                  autocomplete="off"></textarea>
+                <div class="invalid-feedback">Пожалуйста, напишите краткое сообщение.</div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <button type="submit" class="btn btn-primary px-4">Отправить сообщение</button>
+                  <small class="text-muted">Мы ответим после быстрой проверки.</small>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">
+                    Важно: мы отвечаем с <strong>axsetrakb@proton.me</strong>.
+                    Добавьте этот адрес в список надежных отправителей, чтобы не пропустить наш ответ.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">Рекламное место - Google AdSense</div>
 </BaseLayout>
-
-<style>
-  .hero-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  .tagline {
-    font-size: 1.4rem;
-    font-weight: 600;
-    opacity: 1;
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-  }
-  .registration-info {
-    background: white;
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    text-align: center;
-  }
-  .registration-info h2 {
-    margin-bottom: 16px;
-    color: #1a1a2e;
-  }
-  .registration-info p {
-    margin: 6px 0;
-    color: #555;
-  }
-  .disclaimer {
-    text-align: center;
-    padding: 16px 24px;
-    margin-top: 24px;
-    font-size: 0.85rem;
-    color: #777;
-    line-height: 1.5;
-  }
-</style>

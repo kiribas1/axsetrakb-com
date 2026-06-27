@@ -3,101 +3,171 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Axsetra KB | برمجيات مالية آمنة وبنية تحتية للخصوصية"
-  description="برمجيات مالية آمنة وبنية تحتية تركز على الخصوصية. تطوير البرمجيات والاستشارات التقنية. مرخصة في جمهورية كيريباتي."
+  title="Axsetra KB | الأمان، البرمجيات المصرفية والأصول الرقمية"
+  description="تبني Axsetra KB منصات خدمات مصرفية آمنة عبر الإنترنت (AXSE)، تقوية VPS، حلول VPN خاصة بدون سجلات، ومنتجات بلوكتشين تشمل إطلاق التوكنات وتطوير بورصات العملات المشفرة."
   lang="ar"
 >
-  <Fragment slot="logo">Axsetra KB</Fragment>
-  <Fragment slot="footer-name">Axsetra KB</Fragment>
+  <Fragment slot="subtitle">شخصي · أمان · مالية · أصول رقمية</Fragment>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="/images/logo.webp" alt="Logo" class="hero-logo" width="200" height="auto" />
-    <h1>Axsetra KB</h1>
-    <p class="tagline">شخصي · أمان · مالية · أصول رقمية</p>
-    <p>برمجيات مالية آمنة وبنية تحتية تركز على الخصوصية</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row align-items-center" style="min-height:100%;">
+          <div class="col-12 col-lg-7 col-xl-6">
+            <h1 class="hero-title axsetrakbfont titlecolor mb-2">Axsetra KB</h1>
+            <h2 class="h4 subtitlecolor mb-3" style="letter-spacing:.02em;">شخصي · أمان · مالية · أصول رقمية</h2>
+            <p class="hero-lead subtitlecolor mb-4">
+              تبني Axsetra KB برمجيات مالية آمنة وبنية تحتية تركز على الخصوصية: منصات خدمات مصرفية عبر الإنترنت (AXSE)،
+              تقوية VPS، شبكة VPN خاصة مخصصة بدون سجلات، وحلول بلوكتشين للتوكنات والبورصات.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#services" class="btn btn-light px-4">استكشف الخدمات</a>
+              <a href="#contact" class="btn btn-outline-light px-4">تواصل معنا</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>منصات ويب آمنة</h2>
-      <p>مواقع متعددة اللغات مع تكاملات Python لاحتياجات الأعمال المعقدة.</p>
-    </article>
-    <article class="card">
-      <h2>برنامج الخدمات المصرفية عبر الإنترنت (AXSE)</h2>
-      <p>حل مصرفي جاهز للإنتاج يغطي الحسابات والمدفوعات والامتثال.</p>
-    </article>
-    <article class="card">
-      <h2>تعزيز أمان VPS والبنية التحتية</h2>
-      <p>أنظمة العزل والتشفير والتحكم في الوصول.</p>
-    </article>
-    <article class="card">
-      <h2>VPN خاص مخصص</h2>
-      <p>خدمة بدون سجلات مع بلد خروج مخصص؛ غير مشترك بين العملاء.</p>
-    </article>
-    <article class="card">
-      <h2>تطوير التوكنات والبورصات</h2>
-      <p>إنشاء التوكنات على ETH وBNB Chain وSolana. أنظمة DEX/CEX مع محافظ متكاملة ووظائف التداول.</p>
-    </article>
-    <article class="card">
-      <h2>إعداد النطاق الخاص</h2>
-      <p>تكوين الهوية الرقمية مع مراعاة الاختصاص القضائي.</p>
-    </article>
-  </div>
+  <!-- SERVICES -->
+  <section id="services" class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-9">
+        <h2 class="axsetrakbfont mb-2">الخدمات</h2>
+        <p class="text-muted mb-0">تطوير آمن بالتصميم للبنوك وشركات التكنولوجيا المالية والعملاء الخاصين: منصات الويب، الخدمات المصرفية عبر الإنترنت (AXSE)، أمن البنية التحتية، VPN خاص، ومنتجات البلوكتشين.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F310;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">منصات ويب آمنة وتكاملات</h3>
+            <p class="card-text text-muted">مواقع ويب متطورة ومنصات متعددة اللغات مع تكاملات Python لاحتياجات الأعمال المعقدة.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F3E6;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">برنامج الخدمات المصرفية عبر الإنترنت (AXSE)</h3>
+            <p class="card-text text-muted">برنامج مصرفي جاهز للإنتاج للبنوك وشركات التكنولوجيا المالية: حسابات، مدفوعات، أمان، امتثال.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F510;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">تقوية VPS وأمن البنية التحتية</h3>
+            <p class="card-text text-muted">بيئات محصنة: عزل، تشفير، التحكم في الوصول، وعمليات آمنة.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">VPN خاص مخصص (بدون سجلات)</h3>
+            <p class="card-text text-muted">VPN مخصص عالي السرعة مع بلد خروج مخصص. غير مشترك مع عملاء آخرين. تركيز على مكافحة المراقبة.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1FA99;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">تطوير وإطلاق التوكنات</h3>
+            <p class="card-text text-muted">إنشاء ونشر التوكنات على ETH وBNB Chain وSolana مع دعم الإطلاق والإعداد على السلسلة.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F501;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">تطوير بورصات العملات المشفرة (DEX/CEX)</h3>
+            <p class="card-text text-muted">أنظمة بورصات متكاملة مع AXSE أو مستقلة: تداول، محافظ، تكاملات، ومنطق خلفي آمن.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F30D;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">إعداد النطاق الخاص والهوية الرقمية</h3>
+            <p class="card-text text-muted">إعداد النطاق والهوية الرقمية مع خصوصية محسنة، تقليل التعرض، وتكوين مراعٍ للاختصاص القضائي.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
 
-  <section class="registration-info">
-    <h2>التسجيل والمعلومات القانونية</h2>
-    <p><strong>الترخيص:</strong> KBN-40-000001 (تجاري)</p>
-    <p><strong>الجهة المنظمة:</strong> Kiribati International Financial Authority (KIFA)</p>
-    <p><strong>التواصل:</strong> axsetrakb@proton.me</p>
-  </section>
-
-  <section class="disclaimer">
-    <p>تقدم Axsetra KB تطوير البرمجيات والاستشارات التقنية فقط. لا تُقدَّم خدمات مالية أو وساطة أو حفظ أصول أو عمليات بورصة عامة.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="container pb-5">
+    <div class="card p-4 contact-card">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <h2 class="axsetrakbfont mb-2">تواصل معنا</h2>
+          <p class="text-muted mb-3">صف ما تحتاجه (نظرة عامة كافية). سنرد باقتراح بنية آمنة والخطوات التالية.</p>
+          <div class="small text-muted">
+            البريد الإلكتروني: axsetrakb@proton.me
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_name">الاسم</label>
+                <input id="id_name" name="name" class="form-control" required maxlength="120" placeholder="اسمك" autocomplete="name" />
+                <div class="invalid-feedback">يرجى إدخال اسمك.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_email">البريد الإلكتروني</label>
+                <input id="id_email" name="email" type="email" class="form-control" required maxlength="180" placeholder="you@company.com" autocomplete="email" />
+                <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صالح.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="id_message">الرسالة</label>
+                <textarea id="id_message" name="message" class="form-control" rows="5" required maxlength="4000"
+                  placeholder="أخبرنا بما تريد بناءه / تأمينه، الإطار الزمني، وأي قيود رئيسية."
+                  autocomplete="off"></textarea>
+                <div class="invalid-feedback">يرجى كتابة رسالة قصيرة.</div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <button type="submit" class="btn btn-primary px-4">إرسال الرسالة</button>
+                  <small class="text-muted">سنرد بعد مراجعة سريعة.</small>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">
+                    مهم: نرد من <strong>axsetrakb@proton.me</strong>.
+                    يرجى إضافته إلى قائمة المرسلين الآمنين لتجنب فقدان ردنا.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">مساحة إعلانية - Google AdSense</div>
 </BaseLayout>
-
-<style>
-  .hero-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  .tagline {
-    font-size: 1.4rem;
-    font-weight: 600;
-    opacity: 1;
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-  }
-  .registration-info {
-    background: white;
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    text-align: center;
-  }
-  .registration-info h2 {
-    margin-bottom: 16px;
-    color: #1a1a2e;
-  }
-  .registration-info p {
-    margin: 6px 0;
-    color: #555;
-  }
-  .disclaimer {
-    text-align: center;
-    padding: 16px 24px;
-    margin-top: 24px;
-    font-size: 0.85rem;
-    color: #777;
-    line-height: 1.5;
-  }
-</style>

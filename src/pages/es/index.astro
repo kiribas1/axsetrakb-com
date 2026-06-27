@@ -3,101 +3,171 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Axsetra KB | Software Financiero Seguro e Infraestructura de Privacidad"
-  description="Software financiero seguro e infraestructura enfocada en la privacidad. Desarrollo de software y consultoría técnica. Licenciada en la República de Kiribati."
+  title="Axsetra KB | Seguridad, Software Bancario y Activos Digitales"
+  description="Axsetra KB desarrolla plataformas de banca en linea seguras (AXSE), hardening de VPS, soluciones VPN privadas sin registros, y productos blockchain incluyendo lanzamiento de tokens y desarrollo de exchanges."
   lang="es"
 >
-  <Fragment slot="logo">Axsetra KB</Fragment>
-  <Fragment slot="footer-name">Axsetra KB</Fragment>
+  <Fragment slot="subtitle">Personal · Seguridad · Finanzas · Activos Digitales</Fragment>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="/images/logo.webp" alt="Logo" class="hero-logo" width="200" height="auto" />
-    <h1>Axsetra KB</h1>
-    <p class="tagline">Personal · Seguridad · Finanzas · Activos Digitales</p>
-    <p>Software financiero seguro e infraestructura enfocada en la privacidad</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row align-items-center" style="min-height:100%;">
+          <div class="col-12 col-lg-7 col-xl-6">
+            <h1 class="hero-title axsetrakbfont titlecolor mb-2">Axsetra KB</h1>
+            <h2 class="h4 subtitlecolor mb-3" style="letter-spacing:.02em;">Personal · Seguridad · Finanzas · Activos Digitales</h2>
+            <p class="hero-lead subtitlecolor mb-4">
+              Axsetra KB desarrolla software financiero seguro e infraestructura enfocada en la privacidad: plataformas de banca en linea (AXSE),
+              hardening de VPS, VPN dedicada sin registros, y soluciones blockchain para tokens y exchanges.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#services" class="btn btn-light px-4">Explorar Servicios</a>
+              <a href="#contact" class="btn btn-outline-light px-4">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
 
-  <div class="card-grid">
-    <article class="card">
-      <h2>Plataformas Web Seguras</h2>
-      <p>Sitios web multilingües con integraciones en Python para necesidades empresariales complejas.</p>
-    </article>
-    <article class="card">
-      <h2>Software de Banca en Línea (AXSE)</h2>
-      <p>Solución bancaria lista para producción que cubre cuentas, pagos y cumplimiento normativo.</p>
-    </article>
-    <article class="card">
-      <h2>Fortalecimiento de VPS e Infraestructura</h2>
-      <p>Sistemas de aislamiento, cifrado y control de acceso.</p>
-    </article>
-    <article class="card">
-      <h2>VPN Privada Dedicada</h2>
-      <p>Servicio sin registros con país de salida personalizado; no compartido entre clientes.</p>
-    </article>
-    <article class="card">
-      <h2>Desarrollo de Tokens y Exchanges</h2>
-      <p>Creación de tokens en ETH, BNB Chain, Solana. Sistemas DEX/CEX con billeteras integradas y funcionalidad de trading.</p>
-    </article>
-    <article class="card">
-      <h2>Configuración de Dominio Privado</h2>
-      <p>Configuración de identidad web con conciencia jurisdiccional.</p>
-    </article>
-  </div>
+  <!-- SERVICES -->
+  <section id="services" class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-9">
+        <h2 class="axsetrakbfont mb-2">Servicios</h2>
+        <p class="text-muted mb-0">Desarrollo seguro por diseno para bancos, fintechs y clientes privados: plataformas web, banca en linea (AXSE), seguridad de infraestructura, VPN privada y productos blockchain.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F310;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Plataformas Web Seguras e Integraciones</h3>
+            <p class="card-text text-muted">Sitios web de alta gama y plataformas multilingues con integraciones en Python para necesidades empresariales complejas.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F3E6;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Software de Banca en Linea (AXSE)</h3>
+            <p class="card-text text-muted">Software bancario listo para produccion para bancos y fintechs: cuentas, pagos, seguridad, cumplimiento.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F510;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Hardening de VPS y Seguridad de Infraestructura</h3>
+            <p class="card-text text-muted">Entornos reforzados: aislamiento, cifrado, control de acceso y operaciones seguras.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">VPN Privada Dedicada (Sin Registros)</h3>
+            <p class="card-text text-muted">VPN dedicada de alta velocidad con pais de salida personalizado. No compartida con otros clientes. Enfoque anti-vigilancia.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1FA99;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Desarrollo y Lanzamiento de Tokens</h3>
+            <p class="card-text text-muted">Creacion y despliegue de tokens en ETH, BNB Chain y Solana con soporte de lanzamiento y configuracion on-chain.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F501;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Desarrollo de Exchanges Crypto (DEX/CEX)</h3>
+            <p class="card-text text-muted">Sistemas de exchange integrados con AXSE o independientes: trading, wallets, integraciones y logica backend segura.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card service-card h-100">
+          <div class="service-media service-media-icon"><div class="service-icon" aria-hidden="true">&#x1F30D;</div></div>
+          <div class="card-body">
+            <h3 class="h5 card-title">Dominio Privado e Identidad Web</h3>
+            <p class="card-text text-muted">Configuracion de dominio e identidad web con privacidad mejorada, exposicion reducida y configuracion consciente de jurisdiccion.</p>
+            <a href="#contact" class="btn btn-primary btn-sm">Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
 
-  <section class="registration-info">
-    <h2>Registro y Legal</h2>
-    <p><strong>Licencia:</strong> KBN-40-000001 (Comercial/Empresarial)</p>
-    <p><strong>Autoridad:</strong> Kiribati International Financial Authority (KIFA)</p>
-    <p><strong>Contacto:</strong> axsetrakb@proton.me</p>
-  </section>
-
-  <section class="disclaimer">
-    <p>Axsetra KB proporciona únicamente desarrollo de software y consultoría técnica. No se ofrecen servicios financieros, corretaje, custodia ni operaciones de intercambio público.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="container pb-5">
+    <div class="card p-4 contact-card">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-5">
+          <h2 class="axsetrakbfont mb-2">Contacto</h2>
+          <p class="text-muted mb-3">Describa lo que necesita (a nivel general es suficiente). Responderemos con una propuesta de arquitectura segura y proximos pasos.</p>
+          <div class="small text-muted">
+            Email: axsetrakb@proton.me
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_name">Nombre</label>
+                <input id="id_name" name="name" class="form-control" required maxlength="120" placeholder="Su nombre" autocomplete="name" />
+                <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="id_email">Email</label>
+                <input id="id_email" name="email" type="email" class="form-control" required maxlength="180" placeholder="usted@empresa.com" autocomplete="email" />
+                <div class="invalid-feedback">Por favor ingrese un email valido.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="id_message">Mensaje</label>
+                <textarea id="id_message" name="message" class="form-control" rows="5" required maxlength="4000"
+                  placeholder="Cuentenos que desea construir / asegurar, plazo y restricciones clave."
+                  autocomplete="off"></textarea>
+                <div class="invalid-feedback">Por favor escriba un mensaje breve.</div>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <button type="submit" class="btn btn-primary px-4">Enviar mensaje</button>
+                  <small class="text-muted">Responderemos tras una revision rapida.</small>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">
+                    Importante: respondemos desde <strong>axsetrakb@proton.me</strong>.
+                    Agregelo a sus remitentes seguros para no perder nuestra respuesta.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="ad-slot">Espacio Publicitario - Google AdSense</div>
 </BaseLayout>
-
-<style>
-  .hero-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  .tagline {
-    font-size: 1.4rem;
-    font-weight: 600;
-    opacity: 1;
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-  }
-  .registration-info {
-    background: white;
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    text-align: center;
-  }
-  .registration-info h2 {
-    margin-bottom: 16px;
-    color: #1a1a2e;
-  }
-  .registration-info p {
-    margin: 6px 0;
-    color: #555;
-  }
-  .disclaimer {
-    text-align: center;
-    padding: 16px 24px;
-    margin-top: 24px;
-    font-size: 0.85rem;
-    color: #777;
-    line-height: 1.5;
-  }
-</style>

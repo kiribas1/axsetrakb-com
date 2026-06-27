@@ -31,21 +31,25 @@ const langNames: Record<string, string> = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#0b0c10" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Axsetra KB" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${siteUrl}/images/logo.webp`} />
     {ogImage && <meta property="og:image" content={ogImage} />}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/images/logo.webp`} />
 
     <!-- Hreflang -->
     {locales.map((loc) => {
@@ -54,7 +58,15 @@ const langNames: Record<string, string> = {
     })}
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
 
-    <!-- Google AdSense - replace ca-pub-XXXXXXX with your real ID -->
+    <!-- Google Fonts: Comfortaa + Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google AdSense -->
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2701690512336282"
@@ -62,171 +74,255 @@ const langNames: Record<string, string> = {
     ></script>
 
     <style is:global>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      /* === BASE (dark theme matching original) === */
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        line-height: 1.6;
-        color: #1a1a2e;
-        background: #fafafa;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        background: #0b0c10;
+        color: #c8ccd4;
       }
-      a {
-        color: #0066cc;
-        text-decoration: none;
+      .axsetrakbfont {
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
       }
-      a:hover {
-        text-decoration: underline;
+      .titlecolor { color: #f0f8ff; }
+      .subtitlecolor { color: #ffe4c4; }
+      .bgnav { background-color: rgb(38 61 85) !important; }
+
+      /* Override Bootstrap text-muted for dark theme */
+      .text-muted { color: #8a94a6 !important; }
+
+      /* === HERO === */
+      .hero {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        background: #0a0e16;
+        width: 100%;
       }
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background:
+          radial-gradient(ellipse 900px 520px at 30% 45%, rgba(255,70,205,0.15), transparent 60%),
+          radial-gradient(ellipse 800px 400px at 60% 55%, rgba(156,86,255,0.12), transparent 55%),
+          radial-gradient(ellipse 700px 350px at 50% 65%, rgba(40,220,190,0.10), transparent 50%),
+          radial-gradient(circle at 25% 42%, rgba(255,255,255,0.03), transparent 70%),
+          linear-gradient(180deg, #0a0e16 0%, #0e1320 40%, #0a0e16 100%);
       }
-      header {
-        background: #1a1a2e;
-        color: white;
-        padding: 16px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background:
+          radial-gradient(900px 520px at 20% 40%, rgba(0,0,0,0.55), transparent 70%),
+          linear-gradient(90deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.18) 58%, rgba(0,0,0,0.06) 100%);
       }
-      header .container {
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
+        padding: 60px 0;
       }
-      .logo {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: white;
+      .hero-title {
+        font-size: clamp(2.1rem, 3.6vw, 3.6rem);
+        letter-spacing: 0.02em;
       }
-      .logo:hover {
-        text-decoration: none;
+      .hero-lead {
+        font-size: clamp(1rem, 1.2vw, 1.15rem);
+        max-width: 60ch;
       }
-      nav {
+
+      /* === SERVICE CARDS (dark) === */
+      .service-card {
+        border: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #141a2a;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+        color: #c8ccd4;
+      }
+      .service-card .card-title {
+        color: #e8ecf2;
+      }
+      .service-card .card-text {
+        color: #8a94a6 !important;
+      }
+      .service-media {
+        height: 170px;
+        background: rgba(38,61,85,0.25);
         display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
       }
-      nav a {
-        color: #ccc;
-        padding: 4px 10px;
-        border-radius: 4px;
-        font-size: 0.85rem;
+      .service-media-icon {
+        background: linear-gradient(135deg, rgba(38,61,85,0.35), rgba(38,61,85,0.12));
       }
-      nav a:hover,
-      nav a.active {
-        color: white;
-        background: rgba(255, 255, 255, 0.1);
-        text-decoration: none;
+      .service-icon {
+        font-size: 44px;
+        line-height: 1;
+        opacity: 0.9;
       }
-      main {
-        min-height: 70vh;
-        padding: 40px 0;
+
+      /* === CONTACT CARD (dark) === */
+      .contact-card {
+        border: 0;
+        border-radius: 18px;
+        background: #141a2a;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+        color: #c8ccd4;
       }
-      footer {
-        background: #1a1a2e;
-        color: #999;
-        padding: 24px 0;
-        text-align: center;
-        font-size: 0.85rem;
+
+      /* Dark form controls */
+      .contact-card .form-control {
+        background-color: #1a2138;
+        border-color: #2a3352;
+        color: #e0e4ea;
       }
+      .contact-card .form-control::placeholder {
+        color: #5a6478;
+      }
+      .contact-card .form-control:focus {
+        background-color: #1e2640;
+        border-color: #4a6fa5;
+        color: #e0e4ea;
+        box-shadow: 0 0 0 0.2rem rgba(38,61,85,0.35);
+      }
+      .contact-card .form-label {
+        color: #b0b8c8;
+      }
+
+      /* Section headings for dark theme */
+      #services h2,
+      #contact h2 {
+        color: #f0f8ff;
+      }
+
+      /* === AD SLOT (dark) === */
       .ad-slot {
-        background: #f0f0f0;
-        border: 1px dashed #ccc;
+        background: #111520;
+        border: 1px dashed #2a3352;
         padding: 20px;
         text-align: center;
-        margin: 24px 0;
+        margin: 24px auto;
+        max-width: 1140px;
         min-height: 90px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #999;
+        color: #4a5568;
         font-size: 0.8rem;
-      }
-      .hero {
-        text-align: center;
-        padding: 60px 20px;
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-        color: white;
-        border-radius: 12px;
-        margin-bottom: 40px;
-      }
-      .hero h1 {
-        font-size: 2.4rem;
-        margin-bottom: 16px;
-      }
-      .hero p {
-        font-size: 1.15rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 24px;
-        margin: 32px 0;
-      }
-      .card {
-        background: white;
         border-radius: 8px;
-        padding: 24px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s;
       }
-      .card:hover {
-        transform: translateY(-2px);
+
+      /* === FOOTER (dark, matching original) === */
+      .site-footer {
+        background: #0b0c10;
+        border-top-color: #1a2138 !important;
+        color: #8a94a6;
       }
-      .card h2 {
-        font-size: 1.3rem;
-        margin-bottom: 8px;
-        color: #1a1a2e;
+      .site-footer .fw-semibold,
+      .site-footer .text-white {
+        color: #c8ccd4 !important;
       }
-      .card p {
-        color: #555;
-        font-size: 0.95rem;
+      .site-footer strong {
+        color: #b0b8c8;
       }
-      @media (max-width: 640px) {
-        .hero h1 {
-          font-size: 1.6rem;
-        }
-        .card-grid {
-          grid-template-columns: 1fr;
+      .site-footer a {
+        color: #8a94a6;
+        text-decoration: none;
+      }
+      .site-footer a:hover {
+        color: #e0e4ea;
+      }
+
+      /* === RESPONSIVE === */
+      @media (max-width: 576px) {
+        .hero-overlay {
+          background: linear-gradient(180deg, rgba(0,0,0,0.72), rgba(0,0,0,0.25));
         }
       }
     </style>
   </head>
-  <body>
-    <header>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- NAVBAR -->
+    <header class="navbar navbar-expand-lg navbar-dark bgnav">
       <div class="container">
-        <a class="logo" href={`/${lang}/`}><slot name="logo">Site</slot></a>
-        <nav>
-          {locales.map((loc) => {
-            const path = currentPath.replace(`/${lang}/`, `/${loc}/`);
-            return (
-              <a href={path} class={loc === lang ? 'active' : ''}>
-                {langNames[loc]}
-              </a>
-            );
-          })}
-        </nav>
+        <div class="d-flex flex-column flex-md-row align-items-center py-3 w-100">
+          <a href={`/${lang}/`} class="d-flex align-items-center text-decoration-none justify-content-center justify-content-md-start">
+            <img src="/images/logo.webp" alt="Axsetra KB logo" height="110" class="me-md-2 mb-2 mb-md-0" />
+          </a>
+          <span class="d-flex flex-column lh-1 text-center text-md-start flex-grow-1">
+            <span class="fs-1 axsetrakbfont titlecolor">AXSETRA KB</span>
+            <small class="brand-subtitle fs-6 subtitlecolor"><slot name="subtitle">Personal · Security · Finance · Digital Assets</slot></small>
+          </span>
+          <nav class="d-flex flex-wrap gap-1 mt-2 mt-md-0">
+            {locales.map((loc) => {
+              const path = currentPath.replace(`/${lang}/`, `/${loc}/`);
+              return (
+                <a
+                  href={path}
+                  class={`btn btn-sm ${loc === lang ? 'btn-light' : 'btn-outline-light'}`}
+                  style="font-size:0.78rem;"
+                >
+                  {langNames[loc]}
+                </a>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </header>
-    <main>
-      <div class="container">
-        <slot />
-      </div>
+
+    <main class="flex-fill">
+      <slot />
     </main>
-    <footer>
-      <div class="container">
-        <p>&copy; {new Date().getFullYear()} <slot name="footer-name">Site</slot>. All rights reserved.</p>
+
+    <footer class="site-footer mt-auto py-4 border-top">
+      <div class="container small text-muted">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <div class="fw-semibold text-white">&copy; {new Date().getFullYear()} Axsetra KB</div>
+            <div class="mt-2">
+              <div><strong>Registered entity:</strong> Axsetra</div>
+              <div><strong>Licence No.:</strong> KBN-40-000001 &middot; Business / Commercial</div>
+              <div><strong>Authority:</strong> <a href="https://kiribas.org/" target="_blank" rel="noopener noreferrer">Kiribati International Financial Authority (KIFA)</a></div>
+            </div>
+            <div class="mt-2">
+              <strong>Nature of business (SIC):</strong><br />
+              IT Services &amp; Software Development &middot; Cybersecurity Consultancy &middot; Blockchain Software &amp; Digital Infrastructure Services
+            </div>
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <div class="mb-2">
+              <strong>Contact:</strong><br />
+              axsetrakb@proton.me
+            </div>
+            <div class="mb-2" style="max-width:42ch;margin-left:auto;">
+              <strong>Notice:</strong><br />
+              Axsetra KB provides software development and technical consulting only.
+              No financial services, brokerage, custody, or public exchange operations are offered.
+            </div>
+            <div class="d-flex flex-wrap gap-3 justify-content-md-end mt-2">
+              <a href="#services">Services</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
